@@ -24,20 +24,20 @@ pip install Trackier
 ```
 After the installation, start the Jupyter notebook and you will see the Trackier icons added in the toolbar as shown below.
 
-![Provenance of a code cell](Trackier/notebook_ext/Trackier1.png)
+![Provenance of a code cell](provbook/notebook_ext/Trackier1.png)
 
 ## Trackier
 Provenance of Jupyter Notebook
 ------------------------------
 
 This module tracks the provenance of the Jupyter Notebook. It captures and stores the provenance of the run/execution of the cells over the course of time. Every time the notebook is executed, the provenance of the execution is stored in the metadata of the cell. Every cell is extended with a provenance area with a slider. The provenance area shows the history of the execution of each code cell. The provenance information of the cell execution includes the start and end time of each execution, total number of runs, the total time it took to run the code cell, the source code and the output got during that particular execution. It also shows the provenance of text cells where it displays the modified time and the source.
-![Trackier](Trackier/notebook_ext/Trackier2.png)
+![Trackier](provbook/notebook_ext/Trackier2.png)
 
 Trackier icons are added in the toolbar for displaying the provenance of selected or all cells and the provenance difference of executions of cells.
 
 Trackier also adds a provenance menu in the Jupyter Notebook interface.
 
-![Provenance Menu](Trackier/notebook_ext/Trackier3.png)
+![Provenance Menu](provbook/notebook_ext/Trackier3.png)
 
 A user can toggle the provenance display for a selected cell from Cell -> Provenance -> Toggle visibility (selected).
 A user can clear the provenance data from the metadata of the notebook from Cell -> Provenance -> Clear (all).
@@ -68,14 +68,14 @@ or
 notebook_rdf --from RDF notebook_rdf.ttl --to notebook
 ```
 The notebook can also be downloaded as RDF from the File Menu -> Download as -> RDF (.ttl).
-![Download notebook as a Turtle document](Trackier/notebook_ext/notebook_rdf.png)
+![Download notebook as a Turtle document](provbook/notebook_ext/notebook_rdf.png)
 
 Diff of Jupyter Notebook Runs
 -----------------------------
 This module helps users to compare the results of different executions of a Jupyter Notebook. The user is provided with a dropdown to select two executions based on the starting time of the executions. The users can select the original experimenter’s execution with their own execution of the Jupyter Notebook as well.
-![TrackierDiff Selection](Trackier/notebook_ext/TrackierDiff1.png)
+![TrackierDiff Selection](provbook/notebook_ext/TrackierDiff1.png)
  When the user selects the two executions, the difference in the input and the output of these executions are shown side by side.
-![TrackierDiff](Trackier/notebook_ext/TrackierDiff2.png)
+![TrackierDiff](provbook/notebook_ext/TrackierDiff2.png)
 If there are differences in the input or output, the difference is highlighted for the user to distinguish the change.
 This module is based on the [nbdime](https://github.com/jupyter/nbdime) from the Project Jupyter. It extends the nbdime tool and calls the API from nbdime to see the difference between the provenance of each execution of a notebook code cell.
 
